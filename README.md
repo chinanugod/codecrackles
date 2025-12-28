@@ -117,6 +117,13 @@ Community interaction
 
 Secure backend authentication
 
+## 📘 Project Learnings
+
+This project was built as a hands-on learning experience.
+Key technical and design lessons gained during development are documented here:
+
+👉 [Read what I learned building CodeCrackles](./LEARNINGS.md)
+
 👤 Author
 
 Nwaohangwa Chinanu Godwin
