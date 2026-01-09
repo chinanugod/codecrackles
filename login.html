@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Codecrackles</title>
+
+    <!-- Security-related meta tag -->
+    <meta name="referrer" content="no-referrer" />
+    
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+        <!-- Splash Screen -->
+    <div id="splash-screen">
+      <img
+        src="images/codecrackles-transparent.png"
+        alt="CodeCrackles Logo"
+        class="splash-logo"
+      />
+      <p class="splash-text">Loading...</p>
+    </div>
+
+    <!-- Logo at top -->
+    <header>
+      <img
+        src="images/codecrackles-transparent.png"
+        alt="Codecrackles Logo"
+        class="logo"
+        aria-label="Codecrackles-Logo"
+      />
+
+            <!-- Global Menu -->
+<div class="menu-container">
+  <button id="menuToggle" class="menu-btn">☰</button>
+
+  <div id="menuDropdown" class="menu-dropdown hidden">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+    <a href="quiz.html">Quiz</a>
+    <hr />
+    <a href="blog.html" class="coming-soon"><strong>Blog</strong>(Coming Soon)</a>
+  <hr />
+        <a href="courses.html" class="coming-soon"><strong>Courses</strong>(Coming Soon)</a>
+        <hr />  
+        <a href="interview-prep.html" class="coming-soon"><strong>Interview Prep</strong>(Coming Soon)</a>
+    <hr />
+            <button id="menuLogout">Logout</button>
+  </div>
+    </header>
+
+    <main class="login-wrapper" id="main">
+      <div class="login-box">
+      <h1>Enter your login credentials below</h1>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            required
+            inputmode="email"
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+            <input 
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Enter your password"
+            autocomplete="off"
+            required
+            aria-required="true"
+            minlength="8"
+            maxlength="20"
+            />
+            <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+        </div>
+
+        <div class="form-group">
+          <label for="remember" class="checkbox-label">
+            <input id="remember" name="remember" type="checkbox" />
+            Remember me
+          </label>
+        </div>
+
+        <button type="submit" title="Sign in to your account">Sign in</button>
+
+        <div class="extra-links">
+        <p>Don't have an account? <a href="register.html"><strong>Sign up</strong></a></p>
+      </div>
+</form>
+    </main>
+<div>
+    <footer>
+        <p>© <i>2025 Nwaohangwa Chinanu.</i> All rights reserved.</p>
+        <hr />
+        <p>CodeCrackles is an evolving project. 
+        This release focuses on core UX, 
+        authentication flow, and interactive 
+        learning.</p>
+      </footer>
+</div>
+
+ <script src="scripts.js" defer></script>
+ <script src="auth-local.js"></script>
+  </body>
+</html>

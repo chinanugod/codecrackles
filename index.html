@@ -2,113 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-    <title>Codecrackles</title>
-
-    <!-- Security-related meta tag -->
-    <meta name="referrer" content="no-referrer" />
-    
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodeCrackles - Learn & Practice Coding</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-  <!-- Splash Screen -->
-  <div id="splash-screen">
-    <img src="images/codecrackles-transparent.png" alt="CodeCrackles Logo" class="splash-logo">
-    <p class="splash-text">Loading...</p>
-  </div>
-
-    <!-- Logo at top -->
-    <header>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
       <img
         src="images/codecrackles-transparent.png"
-        alt="Codecrackles Logo"
-        class="logo"
-        aria-label="Codecrackles-Logo"
+        alt="CodeCrackles Logo"
+        class="splash-logo"
       />
+      <p class="splash-text">Loading...</p>
+    </div>
 
-            <!-- Global Menu -->
-<div class="menu-container">
-  <button id="menuToggle" class="menu-btn">☰</button>
+    <header class="landing-hero">
+      <div class="hero-content">
+        <h1>Learn, Practice & Master Coding Concepts</h1>
+        <p>
+          CodeCrackles helps you improve coding skills with interactive quizzes,
+          profile tracking, and hands-on learning.
+        </p>
 
-  <div id="menuDropdown" class="menu-dropdown hidden">
-    <a href="dashboard.html">Dashboard</a>
-    <a href="profile.html">Profile</a>
-    <a href="quiz.html">Quiz</a>
-    <hr />
-    <a href="blog.html" class="coming-soon"><strong>Blog</strong>(Coming Soon)</a>
-  <hr />
-        <a href="courses.html" class="coming-soon"><strong>Courses</strong>(Coming Soon)</a>
-        <hr />  
-        <a href="interview-prep.html" class="coming-soon"><strong>Interview Prep</strong>(Coming Soon)</a>
-    <hr />
-            <button id="menuLogout">Logout</button>
-  </div>
+        <a href="login.html" class="btn-primary">Get Started</a>
+      </div>
     </header>
 
-    <main class="login-wrapper" id="main">
-      <div class="login-box">
-      <h1>Enter your login credentials below</h1>
-
-      <form id="loginForm" novalidate>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Enter your email address"
-            autocomplete="email"
-            required
-            inputmode="email"
-            aria-required="true"
-          />
+    <main>
+      <section class="features">
+        <h2>Why CodeCrackles?</h2>
+        <div class="feature-cards">
+          <div class="card">
+            <h3>Interactive Quizzes</h3>
+            <p>
+              50+ questions to challenge your knowledge and track your progress.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Persistent Profiles</h3>
+            <p>
+              Save your progress, scores, and see your improvements over time.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Frontend Architecture</h3>
+            <p>
+              Experience real-world separation of HTML, CSS, and JavaScript
+              logic.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Security Awareness</h3>
+            <p>
+              Understand the limits of frontend-only authentication and safe
+              practice.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div class="form-group">
-          <label for="password">Password</label>
-            <input 
-            id="password"
-            name="password"
-            type="password"
-            placeholder="Enter your password"
-            autocomplete="off"
-            required
-            aria-required="true"
-            minlength="8"
-            maxlength="20"
-            />
-            <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+      <section class="carousel">
+        <h2>Explore Core Features</h2>
+        <div class="carousel-container">
+          <div class="slide active">
+            <h3>Quiz System</h3>
+            <p>
+              Test yourself with multiple-choice questions and see your score
+              immediately.
+            </p>
+          </div>
+          <div class="slide">
+            <h3>Dashboard</h3>
+            <p>
+              Track your quiz results and overall learning progress in one
+              place.
+            </p>
+          </div>
+          <div class="slide">
+            <h3>User Profiles</h3>
+            <p>Maintain your profile and keep a record of your achievements.</p>
+          </div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
         </div>
+      </section>
 
-        <div class="form-group">
-          <label for="remember" class="checkbox-label">
-            <input id="remember" name="remember" type="checkbox" />
-            Remember me
-          </label>
-        </div>
-
-        <button type="submit" title="Sign in to your account">Sign in</button>
-
-        <div class="extra-links">
-        <p>Don't have an account? <a href="register.html"><strong>Sign up</strong></a></p>
-      </div>
-</form>
+      <section class="cta">
+        <h2>Ready to Get Started?</h2>
+        <a href="login.html" class="btn-primary btn-large">Get Started</a>
+      </section>
     </main>
-<div>
-    <footer>
-        <p>© <i>2025 Nwaohangwa Chinanu.</i> All rights reserved.</p>
-        <hr />
-        <p>CodeCrackles is an evolving project. 
-        This release focuses on core UX, 
-        authentication flow, and interactive 
-        learning.</p>
-      </footer>
-</div>
 
- <script src="scripts.js" defer></script>
- <script src="auth-local.js"></script>
+    <footer>
+      <p>© 2025 Nwaohangwa Chinanu. All rights reserved.</p>
+      <hr />
+      <p>
+        CodeCrackles is an evolving project focusing on core UX, authentication
+        flow, and interactive learning.
+      </p>
+    </footer>
+
+    <script src="scripts.js" defer></script>
+    <script src="auth-local.js" defer></script>
   </body>
 </html>

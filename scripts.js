@@ -2,13 +2,19 @@ window.addEventListener("load", () => {
   const splash = document.getElementById("splash-screen");
   const body = document.body;
 
+  // If no splash screen, just show content
+  if (!splash) {
+    body.classList.add("loaded");
+    return;
+  }
+
   setTimeout(() => {
     splash.classList.add("hidden");
     body.classList.add("loaded"); // fade in main content
     setTimeout(() => {
       splash.style.display = "none";
-    }, 1000); // wait for fade transition
-  }, 2500); // show splash for 2.5s
+    }, 500); // wait for fade transition
+  }, 1000); // show splash for 1s
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -59,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
       localStorage.removeItem("loggedInUser");
-      window.location.href = "index.html";
+      window.location.href = "login.html";
     });
   }
 });

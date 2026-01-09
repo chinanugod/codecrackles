@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("users", JSON.stringify(users));
 
       alert("Registration successful! Redirecting to login...");
-      window.location.href = "index.html";
+      window.location.href = "login.html";
     });
   }
 
@@ -65,8 +65,8 @@ const safeUser = {
   };
 
   localStorage.setItem("loggedInUser", JSON.stringify(safeUser));
-
-    alert(`Welcome ${safeUser.fullname}! Redirecting to dashboard...`);
+    
+  alert(`Welcome ${safeUser.fullname}! Redirecting to dashboard...`);
     window.location.href = "dashboard.html";
   });
 }
