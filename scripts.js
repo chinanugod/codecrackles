@@ -17,6 +17,44 @@ window.addEventListener("load", () => {
   }, 1000); // show splash for 1s
 });
 
+// ===============================
+// LANDING PAGE SLIDER (CAROUSEL)
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  if (!slides.length || !prevBtn || !nextBtn) return;
+
+  let currentIndex = 0;
+
+  function showSlide(newIndex, direction) {
+    const current = slides[currentIndex];
+    const next = slides[newIndex];
+
+    // Remove previous exit classes
+    slides.forEach(slide => slide.classList.remove("active", "exit-left", "exit-right"));
+
+    // Add exit class to current slide
+    if (direction === "next") current.classList.add("exit-left");
+    else current.classList.add("exit-right");
+
+    // Show next slide
+    next.classList.add("active");
+    currentIndex = newIndex;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    showSlide((currentIndex + 1) % slides.length, "next");
+  });
+
+  prevBtn.addEventListener("click", () => {
+    showSlide((currentIndex - 1 + slides.length) % slides.length, "prev");
+  });
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("disclaimer-overlay");
   const acceptBtn = document.getElementById("acceptDisclaimer");
