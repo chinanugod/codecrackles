@@ -28,33 +28,61 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!slides.length || !prevBtn || !nextBtn) return;
 
   let currentIndex = 0;
+  let autoSlideTimer;
+  const AUTO_DELAY = 5000; // 5 seconds
 
-  function showSlide(newIndex, direction) {
+  function showSlide(newIndex, direction = "next") {
     const current = slides[currentIndex];
     const next = slides[newIndex];
 
-    // Remove previous exit classes
-    slides.forEach(slide => slide.classList.remove("active", "exit-left", "exit-right"));
+    slides.forEach(slide =>
+      slide.classList.remove("active", "exit-left", "exit-right")
+    );
 
-    // Add exit class to current slide
-    if (direction === "next") current.classList.add("exit-left");
-    else current.classList.add("exit-right");
+    current.classList.add(
+      direction === "next" ? "exit-left" : "exit-right"
+    );
 
-    // Show next slide
     next.classList.add("active");
     currentIndex = newIndex;
   }
 
-  nextBtn.addEventListener("click", () => {
+  function nextSlide() {
     showSlide((currentIndex + 1) % slides.length, "next");
+  }
+
+  function prevSlide() {
+    showSlide(
+      (currentIndex - 1 + slides.length) % slides.length,
+      "prev"
+    );
+  }
+
+  function startAutoSlide() {
+    autoSlideTimer = setInterval(nextSlide, AUTO_DELAY);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideTimer);
+    startAutoSlide();
+  }
+
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetAutoSlide();
   });
 
   prevBtn.addEventListener("click", () => {
-    showSlide((currentIndex - 1 + slides.length) % slides.length, "prev");
+    prevSlide();
+    resetAutoSlide();
   });
+
+  startAutoSlide();
 });
 
-
+// ===============================
+// DISCLAIMER OVERLAY
+// ===============================
 document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("disclaimer-overlay");
   const acceptBtn = document.getElementById("acceptDisclaimer");
@@ -81,6 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ===============================
+// MENU TOGGLE & LOGOUT
+// ===============================
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("menuToggle");
   const dropdown = document.getElementById("menuDropdown");
