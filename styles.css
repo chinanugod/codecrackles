@@ -718,30 +718,45 @@ details label {
 /* ============================
    LANDING PAGE STYLES
 ============================ */
-/* =========================
-   Landing Logo & Nav
-========================= */
-.landing-hero img.logo {
-  width: 220px;
+
+.nav-container {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-container {
+  max-width: 200px;
+  flex-shrink: 0;
 }
 
 .main-menu {
-  position: absolute;
-  top: 20px;
-  right: 60px;
-  font-size: 0.9rem;
-  margin-right: 10px;
   display: flex;
   gap: 20px;
-  z-index: 5;
+  flex-wrap: wrap;
 }
 
+.main-menu a {
+  color: #e0e7ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+  color: #38bdf8;
+}
+
+/* Hero Section */
 .landing-hero {
-  min-height: 90vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -967,6 +982,7 @@ footer {
   .quiz-header h1 {
     font-size: 1.4rem;
   }
+
     .carousel-container {
     padding: 3rem 1.2rem;
   }
