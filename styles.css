@@ -719,32 +719,37 @@ details label {
    LANDING PAGE STYLES
 ============================ */
 
+/* Navigation Bar */
 .nav-container {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  background-color: #a0e0b8
 }
 
 .logo-container {
   max-width: 200px;
+  flex-shrink: 0;
 }
 
 .main-menu {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .main-menu a {
-  color: #e0e7ff;
+  color: #000;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
@@ -754,7 +759,7 @@ details label {
 
 /* Hero Section */
 .landing-hero {
-  min-height: 75vh;
+  min-height: 50vh;
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
@@ -992,5 +997,15 @@ footer {
   .carousel-container button {
     width: 36px;
     height: 36px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-menu {
+    justify-content: center;
   }
 }
