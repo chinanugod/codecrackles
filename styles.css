@@ -733,13 +733,11 @@ details label {
 
 .logo-container {
   max-width: 200px;
-  flex-shrink: 0;
 }
 
 .main-menu {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .main-menu a {
@@ -758,9 +756,11 @@ details label {
 .landing-hero {
   min-height: 75vh;
   display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 3em;
   background: linear-gradient(135deg, #0f172a, #020617);
   color: #fff;
 }
@@ -796,6 +796,8 @@ details label {
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(34,197,94,0.3);
 }
+
+
 
 .feature-cards {
   display: flex;
