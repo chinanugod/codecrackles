@@ -715,6 +715,31 @@ details label {
   padding-left: 20px;
 }
 
+/* ============================
+   LANDING PAGE STYLES
+============================ */
+/* =========================
+   Landing Logo & Nav
+========================= */
+.landing-hero img.logo {
+  width: 220px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.main-menu {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  font-size: 0.9rem;
+  margin-right: 10px;
+  display: flex;
+  gap: 20px;
+  z-index: 5;
+}
+
 .landing-hero {
   min-height: 90vh;
   display: flex;
