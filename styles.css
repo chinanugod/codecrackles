@@ -731,7 +731,7 @@ details label {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  background-color: #a0e0b8
+  background-color: #040533
 }
 
 .logo-container {
@@ -746,7 +746,7 @@ details label {
 }
 
 .main-menu a {
-  color: #000;
+  color: #e0e7ff;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.2rem;
@@ -757,21 +757,17 @@ details label {
   color: #38bdf8;
 }
 
-/* Hero Section */
-.landing-hero {
-  min-height: 50vh;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 3em;
+/* header {
   background: linear-gradient(135deg, #0f172a, #020617);
   color: #fff;
-}
+  padding: 6rem 2rem 5rem;
+} */
+
 
 .hero-content {
   max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -802,7 +798,10 @@ details label {
   box-shadow: 0 12px 30px rgba(34,197,94,0.3);
 }
 
-
+/* Feature Cards Section */
+section.feature {
+  padding: 5rem;
+}
 
 .feature-cards {
   display: flex;
